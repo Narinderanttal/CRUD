@@ -127,4 +127,17 @@ class HomeController extends Controller
        
         return response()->json('File uploaded successfully');
     }
+
+
+    public function deleteuser(Request $request, $id)
+    {
+       $removeimg = User::where('id',$id)->first();
+        if ($removeimg->profile_image != '') {
+           $image_path = public_path().'/storage/file/'.$removeimg->profile_image;
+            unlink($image_path);
+        }
+        $delete = User::where('id',$id)->delete();
+        return redirect('home');   
+    }
+    
 }

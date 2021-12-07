@@ -31,4 +31,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::any('/add-user', [App\Http\Controllers\HomeController::class, 'adduser'])->name('adduser');
 Route::any('/update-user/{id}', [App\Http\Controllers\HomeController::class, 'adduser'])->name('adduser');
+Route::any('/delete-user/{id}', [App\Http\Controllers\HomeController::class, 'deleteuser']);
 Route::post('/uploadfile/{id}', [App\Http\Controllers\HomeController::class, 'uploadfile'])->name('uploadfile');

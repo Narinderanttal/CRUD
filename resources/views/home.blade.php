@@ -59,7 +59,9 @@
                 </form>
             @endif    
          </td>
-         <td><a href="{{url('/')}}/update-user/{{$value->id}}" class="btn btn-primary">update user</a></td>
+         <td><a href="{{url('/')}}/update-user/{{$value->id}}" class="btn btn-primary">update user</a>
+          <a href="{{url('/')}}/delete-user/{{$value->id}}" class="btn btn-primary">delete user</a>
+         </td>
         
       </tr>
       @endforeach
